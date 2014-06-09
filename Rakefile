@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Contacts::Application.load_tasks
+Users::Application.load_tasks
