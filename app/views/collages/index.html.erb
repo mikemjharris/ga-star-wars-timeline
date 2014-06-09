@@ -1,7 +1,0 @@
-<h1>Collage Page</h1>
-
-<%= link_to "Create Collage", collages_path, method: :post %>
-
-<% @photos.each do |image| %>
-  <img src="<%= image.image_url %>">
-<% end %>

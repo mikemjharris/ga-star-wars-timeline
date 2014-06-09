@@ -228,14 +228,16 @@ Devise.setup do |config|
 
   # ==> OmniAuth
 
-  # config.omniauth :twitter, ENV["AUTH_TWITTER_KEY"], ENV["AUTH_TWITTER_SECRET"]
+  
   # config.omniauth :google_oauth2,ENV["AUTH_GOOGLE_KEY"], ENV["AUTH_GOOGLE_SECRET"]
   
   # config.omniauth :github, ENV["AUTH_GITHUB_KEY"], ENV["AUTH_GITHUB_SECRET"]
   # config.omniauth :linkedin, ENV["AUTH_LINKEDIN_KEY"], ENV["AUTH_LINKEDIN_SECRET"]
   # config.omniauth :instagram, ENV["AUTH_INSTAGRAM_KEY"], ENV["AUTH_INSTAGRAM_SECRET"]
-  config.omniauth :facebook, ENV["FACEBOOK_STAR_WARS_KEY"], ENV["FACEBOOK_STAR_WARS_SECRET"] 
+  config.omniauth :facebook, ENV["FACEBOOK_STAR_WARS_KEY"], ENV["FACEBOOK_STAR_WARS_SECRET"], {:scope => 'email, offline_access'}
+  config.omniauth :twitter, ENV["AUTH_TWITTER_KEY"], ENV["AUTH_TWITTER_SECRET"]
   
+
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'

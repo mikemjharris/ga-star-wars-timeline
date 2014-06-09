@@ -1,10 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @contact.name %>
-</p>
+<h1>Facebook timeline</h1>
 
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+
+<%= link_to 'Star Wars your facbook timeline', starwars_facebook_index_path %>
+<%= link_to 'Star Wars your twitter timeline', facebookwars_path %>
+
+
+<% @tweets.each do |tweet| %>
+  <p><%= tweet.full_text %></p>
+<% end %>
+
+

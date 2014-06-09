@@ -15,6 +15,7 @@ gem 'omniauth-linkedin-oauth2'
 gem 'omniauth-instagram'
 gem 'httparty'
 gem "koala", "~> 1.10.0rc"
+gem "twitter"
 
 group :development, :test do
   gem 'pry-rails'

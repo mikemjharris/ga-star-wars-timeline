@@ -1,20 +1,13 @@
-<h1>Listing contacts</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Facebook timeline</h1>
 
 
-<br />
 
-<%= link_to 'Hacks', hacks_path %>
-<%= link_to 'New Contact', new_contact_path %>
-<%= link_to 'instagram_api', instagram_api_path %>
-<%= link_to 'facbook pics!', facebook_api_path %>
-<a href="https://graph.facebook.com/oauth/authorize?client_id=<%= ENV['AUTH_FACEBOOK_KEY'] %>&redirect_uri=http://localhost:3000/apicalls/facebook_auth&scope=user_photos,user_videos,publish_stream">authorize facebook</a>
+<%= link_to 'Star Wars your facbook timeline', starwars_facebook_index_path %>
+<%= link_to 'Star Wars your twitter timeline', facebookwars_path %>
+
+
+<% @tweets.each do |tweet| %>
+  <p><%= tweet.full_text %></p>
+<% end %>
 
 

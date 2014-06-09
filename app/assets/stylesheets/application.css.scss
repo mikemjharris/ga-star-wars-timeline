@@ -80,7 +80,17 @@ body {
   }
 
 #facebook_container{
-  color: white;
+  color: #ff6;
+  position: absolute;
+  top: 100%;
+  line-height: 350%;
+  -webkit-animation: scroll 200s linear 4s infinite;
+}
+
+
+
+#twitter_container{
+  color: #ff6;
   position: absolute;
   top: 100%;
   line-height: 350%;
