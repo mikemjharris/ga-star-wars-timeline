@@ -1,0 +1,29 @@
+<h1>Listing contacts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contacts.each do |contact| %>
+  <tr>
+    <td><%= contact.name %></td>
+    <td><%= link_to 'Show', contact %></td>
+    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+    <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Hacks', hacks_path %>
+<%= link_to 'New Contact', new_contact_path %>
+<%= link_to 'instagram_api', instagram_api_path %>
+<%= link_to 'facbook pics!', facebook_api_path %>
+<a href="https://graph.facebook.com/oauth/authorize?client_id=<%= ENV['AUTH_FACEBOOK_KEY'] %>&redirect_uri=http://localhost:3000/apicalls/facebook_auth&scope=user_photos,user_videos,publish_stream">authorize facebook</a>
+
+
