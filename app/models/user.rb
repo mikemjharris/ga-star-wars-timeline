@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :omniauthable, omniauth_providers: [:twitter, :google_oauth2, :facebook, :github, :linkedin, :instagram]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :uid, :provider, :image, :facebook_token, :twitter_token, :github_token, :instagram_token, :linkedin_token, :google_oauth2_token
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :uid, :provider, :image, :facebook_token, :twitter_token, :github_token, :instagram_token, :linkedin_token, :google_oauth2_token, :twittername
   # attr_accessible :title, :body
 
   has_many :collagephotos
@@ -29,10 +29,12 @@ class User < ActiveRecord::Base
     else
       
       if auth.provider == "twitter"
+
           test = User.create({
               :provider => auth.provider,
               :uid => auth.uid,
               :email => auth.info.nickname.downcase + "@twitter.com",
+              :twittername => auth.info.nickname,
               :image => auth.info.image,
               :password => Devise.friendly_token[0,20]
           })

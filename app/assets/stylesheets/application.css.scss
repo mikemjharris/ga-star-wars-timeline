@@ -12,21 +12,15 @@
  *= require_tree .
  */
 
-@import "jquery.ui.all";
+ 
+
 
 *{
   box-sizing: border-box;
+  font-family: 'Carrois Gothic', sans-serif;
+  @font-face;
 }
 
-.slider_box {
-  width: 400px;
-  /*display: inline-block;*/
-  margin: 0 auto;
-  p {
-    font-size: 1.2em;
-  }
-
-}
 #user_image {
   width: 100px;
 }
@@ -34,27 +28,10 @@
 body {
   margin: 0;
   padding: 0;
+  background: black;
+
 }
-#game_container{
-  width: 660px;
-  height: 660px;
-  padding: 0;
-  margin: 0;
-  /*display: inline-block;*/
-  line-height: 0px;
-  list-style-type: none;
-  margin: 0 auto;
-}
-#randomize{
-  padding: 5px;
-  background: gray;
-  cursor: pointer;  
-  color: red;
-  &:hover {
-    background: red;
-    color: white;
-}
-}
+
 .wholething {
   background: black;
   width: 100%;
@@ -79,6 +56,100 @@ body {
 
   }
 
+.landing_page {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5em;
+  color: #ff6;
+  a {
+    text-decoration: none;
+    color: #ff6;
+    transition: all 0.2s;
+    &:hover {
+      background:  #ff6;
+      color: black;
+    };
+    };
+}
+
+#home_buttons{
+
+    padding: 5px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 200px;
+    line-height: 10px;
+    a {
+      text-align: center;
+    display: inline-block;
+    width: 175px;
+    padding: 5px;
+    text-decoration: none;
+    border: 1px solid #ff6 ;
+    color: #ff6;
+    margin: 5px;
+    transition: all 0.2s;
+    &:hover {
+      background:  #ff6;
+      color: black;
+    };
+  }
+
+}
+
+
+#timeline_view {
+  display: inline-block;
+  padding: 15px 10px;
+  width: 300px;
+  margin: 20px 0;
+  line-height: 1.5em;
+  border: 2px solid #ff6;
+}
+#or{
+  display: inline;
+}
+
+
+#input_user {
+  display: inline-block;
+  width: 300px;
+  margin: 20px 0;
+  input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    /*line-height: 1.5em;*/
+  }
+  input[type="submit"]{
+    -webkit-appearance:none;
+    background: black !important;
+    border: 2px solid #ff6 !important;
+    color:#ff6;
+    width: 90%;
+    /*height: 50px;*/
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px;
+    
+  }
+}
+
+#error_wars{
+  background:  #ff6;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+
+
 #facebook_container{
   color: #ff6;
   position: absolute;
@@ -86,6 +157,7 @@ body {
   line-height: 350%;
   -webkit-animation: scroll 200s linear 4s infinite;
 }
+
 
 
 

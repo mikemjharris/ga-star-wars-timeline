@@ -1,5 +1,30 @@
-<a href="#">Sign in with twitter</a>
 
+<div class="landing_page">
+
+<% if current_user %>
+  <a id="timeline_view" href="../starwars_twitter/<%= current_user.twittername %>">Click to See Your Star Wars Twitter Timeline</a>
+
+<% else %>
+  <a id="timeline_view" href="../users/auth/twitter">Sign In With Twitter</a>
+<% end %>
+
+<div id="or">
 OR
-Enter a twitter username
-<input placeholder="enter a twitter username" />
+</div>
+<div id="input_user">
+    <form name="input" action="/starwars_twitter/" method="get">
+      Enter a Twitter Username <input type="text" name="twittername">
+    <input type="submit" value="Enter the Dark Side">
+    </form>
+</div>
+
+
+  
+    <% if flash[:nouser] %>
+    <div id="error_wars">
+          <%= flash[:nouser] %>
+      </div>
+    <% end %>
+
+
+</div>

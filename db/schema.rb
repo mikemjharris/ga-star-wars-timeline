@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140529153314) do
+ActiveRecord::Schema.define(:version => 20140609202159) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20140529153314) do
     t.string   "instagram_token"
     t.string   "google_oauth2_token"
     t.string   "github_token"
+    t.string   "twittername"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

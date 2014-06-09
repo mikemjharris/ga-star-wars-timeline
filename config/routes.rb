@@ -12,5 +12,5 @@ Contacts::Application.routes.draw do
     get 'apicalls/game', to:  'apicalls#game', as: 'game'
     get 'apicalls/hacks', to:  'apicalls#hacks', as: 'hacks'
     get 'contacts/facebookwars', to:  'contacts#facebookwars', as: 'facebookwars'
-  root to: 'contacts#index'
+  root to: 'starwars_twitter#index'
 end
