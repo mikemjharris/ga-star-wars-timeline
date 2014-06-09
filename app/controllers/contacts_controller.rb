@@ -5,12 +5,9 @@ class ContactsController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @contacts = Contact.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @contacts }
-    end
+   
+    
+   
   end
 
   # GET /contacts/1

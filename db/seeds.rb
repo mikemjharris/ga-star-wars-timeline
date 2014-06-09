@@ -1,6 +1,0 @@
-Contact.create! name: 'Dave'
-Contact.create! name: 'Fred'
-Contact.create! name: 'Sue'
-Contact.create! name: 'Barney'
-Contact.create! name: 'Betty'
-Contact.create! name: 'Wilma'
