@@ -13,3 +13,13 @@
 //= require jquery
 //= require_tree .
 
+
+
+
+
+
+$(document).ready(function(){
+   $('#play_music').on("click", function() {
+      $('audio')[0].play()
+   })
+ });
