@@ -1,20 +1,21 @@
 
 <div class="landing_page">
 <h2>Star Wars<br />Twitter Timeline</h2>
-<% if current_user %>
+<% if nil %>
   <a id="timeline_view" href="../starwars_twitter/<%= current_user.twittername %>">Click to See Your Star Wars Twitter Timeline</a>
 
-<% else %>
-  <a id="timeline_view" href="../users/auth/twitter">Sign In With Twitter</a>
-<% end %>
 
-<div id="or">
+  <a id="timeline_view" href="../users/auth/twitter">Sign In With Twitter</a>
+  <div id="or">
 OR
 </div>
+<% end %>
+
+
 <div id="input_user">
     <form name="input" action="/starwars_twitter/" method="get">
-      Enter a Twitter Username <input type="text" name="twittername">
-    <input type="submit" value="Enter the Dark Side">
+      Input a Twitter Username <input type="text" name="twittername">
+    <input type="submit" value="Click to view timeline">
     </form>
 </div>
 
