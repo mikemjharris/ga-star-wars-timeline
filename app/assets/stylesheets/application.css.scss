@@ -82,8 +82,10 @@ body {
 }
 
 #title {
-
-  
+  h2 {
+  text-shadow: none;
+    color: #ff6;
+  }
     
   opacity: 0;
   margin-top: 150px;
