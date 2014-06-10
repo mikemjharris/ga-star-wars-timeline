@@ -1,7 +1,7 @@
 Contacts::Application.routes.draw do
 
   devise_for :users, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
-
+  
   resources :contacts
   resources :collages
   resources :starwars_facebook
@@ -13,4 +13,5 @@ Contacts::Application.routes.draw do
     get 'apicalls/hacks', to:  'apicalls#hacks', as: 'hacks'
     get 'contacts/facebookwars', to:  'contacts#facebookwars', as: 'facebookwars'
   root to: 'starwars_twitter#index'
+
 end
