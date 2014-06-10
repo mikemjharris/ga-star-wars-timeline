@@ -37,10 +37,15 @@ class StarwarsTwitterController < ApplicationController
     @tweets = client.user_timeline(params[:id], {count: 20})
     @name = @tweets[0].user.name
     @user_image = @tweets[0].user.profile_image_url
-    if current_user.twittername = @tweets[0].user.nickname 
+    unless current_user.nil?
+      if current_user.twittername = @tweets[0].user.nickname 
           @text = ["Check out my star wars intro twitter feed!", "My timeline starwarsified!"].sample
+      else
+        @text = ["Checkout " + @name + "'s star wars twitter feed"]    
+      end
     else
         @text = ["Checkout " + @name + "'s star wars twitter feed"]    
+
     end
     render layout: 'basic'
     end 
