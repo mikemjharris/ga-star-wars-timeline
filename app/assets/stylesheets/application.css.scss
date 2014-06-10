@@ -237,9 +237,15 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+
+  #main {
+    -webkit-transform: perspective(300px) rotateX(50deg);
+  }
   #twitter_container{
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    line-height: 200%;
+    font-size: 200%;
   }
 }
