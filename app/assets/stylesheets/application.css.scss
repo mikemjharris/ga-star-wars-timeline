@@ -40,13 +40,13 @@ body {
 #main{
  position: absolute;
  padding: 0px;
-
+ /*width: 15em;*/
   width: 100%;
   height: 50em;
   bottom: 0;
   /*border: 1px solid red;*/
   /*left: -5%;*/
-  /*margin-left: -9em;*/
+  /*margin-left: 5%;*/
   font-size: 350%;
   text-align: justify;
   /*overflow: hidden;*/
@@ -57,13 +57,13 @@ body {
 
 #twitter_container{
   /*border: 1px solid green;*/
-  width: 100%;
   color: #ff6;
   position: absolute;
   top: 100%;
-  left: 0;
   line-height: 350%;
   -webkit-animation: scroll 200s linear 4s infinite;
+  margin-left: 13%;
+  margin-right: 13%;
 }
 
 @-webkit-keyframes scroll {
@@ -234,4 +234,12 @@ body {
   padding: 0;
   width: 640px;
   position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  #twitter_container{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
