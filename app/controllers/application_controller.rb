@@ -8,4 +8,7 @@ class ApplicationController < ActionController::Base
     starwars_twitter_path(user.twittername)
   end
 
+  def after_sign_out_path_for(user)
+    root_path
+  end
 end

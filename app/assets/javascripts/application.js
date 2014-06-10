@@ -23,5 +23,11 @@ $(document).ready(function(){
    $('#play_music').on("click", function() {
       $('audio')[0].play()
       $('#play_music').remove();
+      $el = $('#all_animation').html()
+      $('#all_animation').html("")
+      setTimeout(function() {
+        $('#all_animation').append($el)
+      }, 3000)
+
    })
  });
