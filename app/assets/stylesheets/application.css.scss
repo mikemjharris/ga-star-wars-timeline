@@ -254,3 +254,26 @@ a#play_music {
   display: none;
 }
 
+@media screen and (max-width: 600px) {
+
+  #twitter_container{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 200%;
+    font-size: 90%;
+  }
+
+  a#play_music {
+  display: inline-block;
+  /*width: 100%;*/
+  /*heigh: 50px;*/
+}
+  #home_buttons{
+    width: 100%;
+    a {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
