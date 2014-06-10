@@ -19,3 +19,9 @@
 
 
 
+$(document).ready(function(){
+   $('#play_music').on("click", function() {
+      $('audio')[0].play()
+      $('#play_music').remove();
+   })
+ });

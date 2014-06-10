@@ -45,7 +45,7 @@ class StarwarsTwitterController < ApplicationController
         @text = "Checkout " + @name + "'s Star Wars twitter feed"    
       end
     else
-        @text = "Checkout " + @name + "'s Star Wzxcars twitter feed"
+        @text = "Checkout " + @name + "'s Star Wars twitter feed"
 
     end
     render layout: 'basic'
