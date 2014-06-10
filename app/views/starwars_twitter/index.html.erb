@@ -1,6 +1,6 @@
 
 <div class="landing_page">
-
+<h2>Star Wars<br />Twitter Timeline</h2>
 <% if current_user %>
   <a id="timeline_view" href="../starwars_twitter/<%= current_user.twittername %>">Click to See Your Star Wars Twitter Timeline</a>
 
@@ -25,9 +25,11 @@ OR
           <%= flash[:nouser] %>
       </div>
     <% end %>
-
+    <div id="front-share">
+      <a target=_blank href="https://twitter.com/intent/tweet?hashtags=starwarstimeline&amp;original_referer=http%3A%2F%2Flocalhost%3A3000%2Fmike&amp;text=Star Wars twitter timeline!&amp;tw_p=tweetbutton&amp;url=http%3A%2F%2Fstarwars_twitter%3A3000%2F&amp;">On Twitter Share Must</a>
+    </div>
     <div id="acknowledge">
-      <a href="www.sirrahj.co.uk">Built by Mike Harris</a>
+      <a href="http://www.sirrahj.co.uk">Built by Mike Harris</a>
     <div>
 
 

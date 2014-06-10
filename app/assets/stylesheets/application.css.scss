@@ -71,11 +71,20 @@ body {
       color: black;
     };
     };
+  h2 {
+    border-top: 8px solid #ff6;
+    border-bottom: 8px solid #ff6;
+    padding: 5px;
+  }
 }
 
-#acknowledge {
-  margin-top: 40px;
+#acknowledge a {
+  margin-top: 5px;
   font-size: 0.7em;
+  padding: 5px;
+  width: 90%;
+  display: inline-block;  
+  border-radius: 5px;
 }
 
 #home_buttons{
@@ -92,6 +101,7 @@ body {
     padding: 5px;
     text-decoration: none;
     border: 1px solid #ff6 ;
+    border-radius: 5px;
     color: #ff6;
     margin: 5px;
     transition: all 0.2s;
@@ -103,6 +113,23 @@ body {
 
 }
 
+#front-share{
+    margin-top:40px;
+    padding: 5px;
+    width: 90%;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #ff6 ;
+    border-radius: 5px;
+    color: #ff6;
+    font-size: 0.8em;
+    transition: all 0.2s;
+    &:hover {
+      background:  #ff6;
+      color: black;
+    };
+
+}
 
 #timeline_view {
   display: inline-block;
@@ -111,6 +138,7 @@ body {
   margin: 20px 0;
   line-height: 1.5em;
   border: 2px solid #ff6;
+  border-radius: 5px;
 }
 #or{
   display: inline;
@@ -128,11 +156,13 @@ body {
     text-align: center;
     font-size: 1.2em;
     /*line-height: 1.5em;*/
+    border-radius: 5px;
   }
   input[type="submit"]{
     -webkit-appearance:none;
     background: black !important;
     border: 2px solid #ff6 !important;
+    border-radius: 5px !important;
     color:#ff6;
     width: 90%;
     /*height: 50px;*/
@@ -140,6 +170,11 @@ body {
     font-size: 1em;
     cursor: pointer;
     margin: 10px;
+     transition: all 0.2s;
+    &:hover {
+      color: black !important;
+      background: #ff6 !important;
+    };
     
   }
 }
