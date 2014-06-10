@@ -5,11 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:twitter,  :facebook]
 
-  # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :twittername, :password, :password_confirmation, :remember_me, :uid, :provider, :image 
-  # attr_accessible :title, :body
+ 
 
-  has_many :collagephotos
 
   def self.from_omniauth(auth)
     

@@ -28,7 +28,7 @@ class StarwarsTwitterController < ApplicationController
      begin  
       @tweets = client.user_timeline(params[:id], {count: 20})
     rescue 
-      flash[:nouser] = "No user that name by. Do. Or not do. There is no try"
+      flash[:nouser] = "No user that name by. Do. Or do not. There is no try"
       redirect_to :root
     else
     # link text
