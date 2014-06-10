@@ -117,7 +117,7 @@ body {
 }
 
 #home_buttons{
-    padding: 5px;
+    padding: 0px;
     position: absolute;
     top: 0px;
     right: 0px;
@@ -126,13 +126,13 @@ body {
     a {
       text-align: center;
     display: inline-block;
-    width: 175px;
-    padding: 5px;
+    width: 200px;
+    padding: 10px;
     text-decoration: none;
     border: 1px solid #ff6 ;
     border-radius: 5px;
     color: #ff6;
-    margin: 5px;
+    margin: 5px 0;
     transition: all 0.2s;
     &:hover {
       background:  #ff6;
