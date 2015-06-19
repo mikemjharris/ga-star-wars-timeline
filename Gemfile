@@ -13,6 +13,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-github'
 gem 'omniauth-linkedin-oauth2'
 gem 'omniauth-instagram'
+gem 'sqlite3'
 gem 'httparty'
 gem "koala", "~> 1.10.0rc"
 gem "twitter"
