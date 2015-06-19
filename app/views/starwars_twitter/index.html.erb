@@ -1,37 +1,22 @@
-
 <div class="landing_page">
-<h2>Star Wars<br />Twitter Timeline</h2>
-<% if nil %>
-  <a id="timeline_view" href="../starwars_twitter/<%= current_user.twittername %>">Click to See Your Star Wars Twitter Timeline</a>
-
-
-  <a id="timeline_view" href="../users/auth/twitter">Sign In With Twitter</a>
-  <div id="or">
-OR
-</div>
-<% end %>
-
-
-<div id="input_user">
+  <h2>Star Wars<br />Twitter Timeline</h2>
+  <div id="input_user">
     <form name="input" action="/starwars_twitter/" method="get">
-      Input a Twitter Username <input type="text" name="twittername" placeholder="e.g. mikemjharris">
-    <input type="submit" value="Click to view timeline">
+      Input a Twitter Username
+      <input type="text" name="twittername" placeholder="e.g. mikemjharris">
+      <input type="submit" value="Click to view timeline">
     </form>
-</div>
-
-
-  
-    <% if flash[:nouser] %>
+  </div>
+  <% if flash[:nouser] %>
     <div id="error_wars">
-          <%= flash[:nouser] %>
-      </div>
-    <% end %>
-    <div id="front-share">
-      <a target=_blank href="https://twitter.com/intent/tweet?hashtags=StarWarsTimeline&amp;original_referer=http://star-wars-timeline.sirrahmj.co.uk/starwars_twitter/&amp;text=Star Wars Twitter timeline! @mikemjharris&amp;tw_p=tweetbutton&amp;url=http://star-wars-timeline.sirrahmj.co.uk/starwars_twitter/&amp;">On Twitter Share Must</a>
+      <%= flash[:nouser] %>
     </div>
-    <div id="acknowledge">
-      <a href="https://twitter.com/mikemjharris">Built by Mike Harris</a>
-    <div>
+  <% end %>
 
-
+  <div id="front-share">
+    <a target=_blank href="https://twitter.com/intent/tweet?hashtags=StarWarsTimeline&amp;original_referer=http://star-wars-timeline.sirrahmj.co.uk/starwars_twitter/&amp;text=Star Wars Twitter timeline! @mikemjharris&amp;tw_p=tweetbutton&amp;url=http://star-wars-timeline.sirrahmj.co.uk/starwars_twitter/&amp;">On Twitter Share Must</a>
+  </div>
+  <div id="acknowledge">
+    <a href="https://twitter.com/mikemjharris">Built by Mike Harris</a>
+  <div>
 </div>
