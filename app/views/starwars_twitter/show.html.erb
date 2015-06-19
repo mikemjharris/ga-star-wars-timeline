@@ -29,19 +29,17 @@
     <div id="main">
       <div id="twitter_container">
         A long time ago, in a galaxy far, far away....<%= @name %> tweeted...<br /><br />
-        
-        
-         <% @tweets.each do |tweet| %>
-            <img src="<%= @user_image %>" />
-            <% if tweet.in_reply_to_user_id? %>
-             <%= ["They", @name, ""].sample %> replied to <%= tweet.in_reply_to_screen_name %>  and wrote:  
-            <% elsif tweet.retweeted_tweet? %> 
-              <%= ["They", @name, ""].sample %> retweeted this 
-            <% else %>
-              <%= ["", @name].sample %> wrote:
-            <% end %> 
-            <%= tweet.full_text %><br />
+        <% @tweets.each do |tweet| %>
+          <img src="<%= @user_image %>" />
+          <% if tweet.in_reply_to_user_id? %>
+            <%= ["They", @name, ""].sample %> replied to <%= tweet.in_reply_to_screen_name %>  and wrote:
+          <% elsif tweet.retweeted_tweet? %>
+            <%= ["They", @name, ""].sample %> retweeted this
+          <% else %>
+            <%= ["", @name].sample %> wrote:
           <% end %>
+          <%= tweet.full_text %><br />
+        <% end %>
       </div>
     </div>
   </div>
