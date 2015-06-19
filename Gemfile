@@ -5,15 +5,10 @@ gem 'rails', '3.2.18'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
-gem 'devise'
-gem 'omniauth-google-oauth2'
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-gem 'omniauth-github'
-gem 'omniauth-linkedin-oauth2'
-gem 'omniauth-instagram'
+
 gem 'sqlite3'
+
+
 gem 'httparty'
 gem "koala", "~> 1.10.0rc"
 gem "twitter"
@@ -22,9 +17,9 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-stack_explorer'
   gem 'binding_of_caller'
-  gem 'better_errors'   
+  gem 'better_errors'
 
-  
+
 end
 
 # Gems used only for assets and not required
