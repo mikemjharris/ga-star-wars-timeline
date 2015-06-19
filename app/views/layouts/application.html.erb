@@ -20,11 +20,8 @@
 
 </head>
 <body>
-<% if current_user %>
-    <%= link_to 'logout', destroy_user_session_path, method: :delete %>
-  <% end %>
-    
- <%= image_tag("logo.png", :alt => "logo",  id: "hideit") %>   
+
+ <%= image_tag("logo.png", :alt => "logo",  id: "hideit") %>
 
 <%= yield %>
 
