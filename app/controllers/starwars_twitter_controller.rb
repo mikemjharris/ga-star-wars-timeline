@@ -1,38 +1,27 @@
 class StarwarsTwitterController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index, :show]
-
 
   def index
-
-
-  if params["twittername"]
-    redirect_to :action => 'show', :id => params["twittername"]
-  else  
-    render :index
+    if params["twittername"]
+      redirect_to :action => 'show', :id => params["twittername"]
+    else
+      render :index
+    end
   end
-
-
-    
-  end
-
 
   def show
-
     client = Twitter::REST::Client.new do |config|
       config.consumer_key = ENV["TWITTER_STAR_WARS_KEY"]
       config.consumer_secret = ENV["TWITTER_STAR_WARS_SECRET"]
       config.oauth_token = ENV["TWITTER_STAR_WARS_ACCESS_KEY"]
-      config.oauth_token_secret = ENV["TWITTER_STAR_WARS_SECRET"]
+      config.oauth_token_secret = ENV["TWITTER_STAR_WARS_ACCESS_SECRET"]
     end
 
-     begin  
+    begin
       @tweets = client.user_timeline(params[:id], {count: 20})
-    rescue 
+    rescue
       flash[:nouser] = "No user that name by. Do. Or do not. There is no try"
       redirect_to :root
     else
-    # link text
-        
 
     @tweets = client.user_timeline(params[:id], {count: 20})
     @name = @tweets[0].user.name
@@ -40,9 +29,7 @@ class StarwarsTwitterController < ApplicationController
     @text = "Checkout " + @name + "'s Star Wars twitter feed. Made by @mikemjharris"
 
     render layout: 'basic'
-    end 
+    end
   end
-
-
 
 end
