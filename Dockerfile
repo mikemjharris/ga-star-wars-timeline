@@ -10,15 +10,20 @@ ENV RAILS_VERSION 3.2.18
 
 RUN gem install rails --version "$RAILS_VERSION"
 
-RUN mkdir -p /var/log/www/
+ADD Gemfile /tmp/Gemfile
+ADD Gemfile.lock /tmp/Gemfile.lock
+RUN cd /tmp && bundle install
+RUN mkdir -p /var/www/ && cp -a /tmp /var/www/
+WORKDIR /tmp/
+
+RUN bundle install
+
 VOLUME /var/log/www/
 
 ADD . /var/www/
 
 WORKDIR /var/www/
 
-RUN bundle install
 
-CMD source .env && rails s
-
+CMD . /var/www/.env && rails s
 EXPOSE 3000
