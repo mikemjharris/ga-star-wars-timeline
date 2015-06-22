@@ -23,3 +23,7 @@ log/*.log
 tmp/**/*
 db/*.sqlite3
 public/system/**/*
+
+
+#Ignore environment variables
+.env
