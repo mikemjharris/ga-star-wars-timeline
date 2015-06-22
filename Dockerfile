@@ -19,13 +19,6 @@ WORKDIR /var/www/
 
 RUN bundle install
 
-
-# ADD Gemfile $APP_HOME
-
-
-
-
-
-CMD rails s
+CMD source .env && rails s
 
 EXPOSE 3000
