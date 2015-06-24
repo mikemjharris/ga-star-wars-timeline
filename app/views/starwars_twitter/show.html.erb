@@ -15,7 +15,7 @@
 </div>
 <div id="home_buttons">
   <a href="/">Another Timeline Try</a>
-  <a target=_blank href="https://twitter.com/intent/tweet?hashtags=StarWarsTimeline&amp;original_referer=http://star-wars-timeline.sirrahmj.co.uk/starwars_twitter/&amp;text=<%= @text %>&amp;tw_p=tweetbutton&amp;url=http://star-wars-timeline.sirrahmj.co.uk/starwars_twitter/<%= params[:id] %>&amp;">On Twitter Share Must</a>
+  <a target=_blank href="https://twitter.com/intent/tweet?hashtags=StarWarsTimeline&amp;original_referer=<%= request.url %>&amp;text=<%= @text %>&amp;tw_p=tweetbutton&amp;url=<%= request.url %>">On Twitter Share Must</a>
   <a id="play_music" href="#">Click for music!</a>
 </div>
 
