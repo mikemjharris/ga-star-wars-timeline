@@ -12,7 +12,7 @@
  *= require_tree .
  */
 
- 
+
 
 
 *{
@@ -90,7 +90,7 @@ body {
   text-shadow: none;
     color: #ff6;
   }
-    
+
   opacity: 0;
   margin-top: 150px;
   /*width: 200px;*/
@@ -141,19 +141,20 @@ body {
   font-size: 0.7em;
   padding: 5px;
   width: 90%;
-  display: inline-block;  
+  display: inline-block;
   border-radius: 5px;
 }
 
 #home_buttons{
-    padding: 0px;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 200px;
-    line-height: 10px;
-    a {
-      text-align: center;
+  padding: 0px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 200px;
+  line-height: 10px;
+  z-index: 100;
+  a {
+    text-align: center;
     display: inline-block;
     width: 200px;
     padding: 10px;
@@ -168,12 +169,11 @@ body {
       color: black;
     };
   }
-
 }
 
 #front-share{
     margin-top:40px;
-    
+
     width: 90%;
     display: inline-block;
     text-decoration: none;
@@ -241,7 +241,7 @@ body {
       color: black !important;
       background: #ff6 !important;
     };
-    
+
   }
 }
 
