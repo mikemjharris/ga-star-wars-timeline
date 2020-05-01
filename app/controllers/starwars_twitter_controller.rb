@@ -27,7 +27,7 @@ class StarwarsTwitterController < ApplicationController
     @name = @tweets[0].user.name
     @user_image = @tweets[0].user.profile_image_url
     @text = "Checkout " + @name + "'s Star Wars twitter feed. Made by @mikemjharris"
-
+    @preview = "Checkout " + @name + "'s Star Wars twitter feed."
     render layout: 'basic'
     end
   end
