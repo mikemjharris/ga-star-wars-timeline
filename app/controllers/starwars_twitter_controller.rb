@@ -12,8 +12,8 @@ class StarwarsTwitterController < ApplicationController
     client = Twitter::REST::Client.new do |config|
       config.consumer_key = ENV["TWITTER_STAR_WARS_KEY"]
       config.consumer_secret = ENV["TWITTER_STAR_WARS_SECRET"]
-      config.oauth_token = ENV["TWITTER_STAR_WARS_ACCESS_KEY"]
-      config.oauth_token_secret = ENV["TWITTER_STAR_WARS_ACCESS_SECRET"]
+      config.access_token = ENV["TWITTER_STAR_WARS_ACCESS_KEY"]
+      config.access_token_secret = ENV["TWITTER_STAR_WARS_ACCESS_SECRET"]
     end
 
     begin
